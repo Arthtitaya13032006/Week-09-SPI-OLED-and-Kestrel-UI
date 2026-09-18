@@ -264,7 +264,7 @@ I (302) OLED_LAB9_1: Full screen 0xFF written. Display should now be completely 
 I (302) main_task: Returned from app_main()
 ```
 ### รูปภาพ
-![alt text](9.1.2.png)
+![alt text](Images/9.1.2.png)
 
 ---
 
@@ -396,7 +396,7 @@ I (1802) main_task: Returned from app_main()
 ```
 
 ### รูปภาพ
-![alt text](9.1.3.png)
+![alt text](Images/9.1.3.png)
 ---
 
 ### กิจกรรมที่ 1.4 สร้างตัวอักษรและพิมพ์ "Hello World"
@@ -565,7 +565,7 @@ I (3303) OLED_LAB9_1: Text rendered successfully.
 I (3303) main_task: Returned from app_main()
 ```
 ### รูปภาพ
-![alt text](S__72343564.jpg)
+![alt text](Images/S__72343564.jpg)
 ---
 
 
@@ -680,7 +680,7 @@ Bit 6:  █ . . . █
 Bit 7:  . . . . .
 ```
 ### รูปภาพ 
-![alt text](S__72343562-2.jpg)
+![alt text](Images/S__72343562-2.jpg)
 
 ---
 

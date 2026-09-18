@@ -293,7 +293,7 @@ Server: Kestrel
 {"raw":2048,"calibrated":50.0,"unit":"%","displayMsg":"SYSTEM READY","timestamp":"2026-09-13T..."}
 ```
 ### รูปภาพ
-![alt text](9.2.2.1.1-2.png)
+![alt text](Images/9.2.2.1.1-2.png)
 ---
 
 #### 2. ทำการ Calibrate เซนเซอร์ใหม่ (HTTP POST พร้อม JSON Body)
@@ -320,7 +320,7 @@ Server: Kestrel
 {"status":"success","settings":{"rawMin":200,"rawMax":3800,"scaleMin":0,"scaleMax":1000,"unit":"RPM"}}
 ```
 ### รูปภาพ
-![alt text](9.2.2.1.2.png)
+![alt text](Images/9.2.2.1.2.png)
 ---
 
 #### 3. ส่งข้อความใหม่ไปแสดงบนหน้าจอ OLED (HTTP POST)
@@ -346,7 +346,7 @@ Server: Kestrel
 {"status":"success","current":"Hello OLED"}
 ```
 ### รูปภาพ
-![alt text](9.2.2.1.3.png)
+![alt text](Images/9.2.2.1.3.png)
 
 ---
 
@@ -374,8 +374,8 @@ Server: Kestrel
    * **ผลที่คาดหวัง:** เซิร์ฟเวอร์ต้องตอบกลับด้วย **`400 Bad Request`** พร้อมข้อความเตือน `"RawMax ต้องมีค่ามากกว่า RawMin เสมอ!"` โดยที่เซิร์ฟเวอร์ Kestrel **ไม่ล่ม (No Server Crash)**!
 
    ### รูปภาพ
-   ![alt text](9.2.2.2.1.png)
-   ![alt text](<9.2.2.2.1 (2).png>)
+   ![alt text](Images/9.2.2.2.1.png)
+   ![alt text](<Images/9.2.2.2.1 (2).png>)
 
 2. **ทดสอบส่งข้อความว่างเปล่า:**
    ```powershell
@@ -386,8 +386,8 @@ Server: Kestrel
    * **ผลที่คาดหวัง:** ได้รับ **`400 Bad Request`** แจ้งว่าข้อความต้องไม่ว่างเปล่า
 
 ### รูปภาพ
-![alt text](9.2.2.2.2.png)
-![alt text](<9.2.2.2.2 (2).png>)
+![alt text](Images/9.2.2.2.2.png)
+![alt text](<Images/9.2.2.2.2 (2).png>)
 
 ---
 

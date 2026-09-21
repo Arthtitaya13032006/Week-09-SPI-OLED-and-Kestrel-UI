@@ -886,6 +886,26 @@ dotnet run
 1. **ทดสอบปิด Kestrel ด้วย `Ctrl+C`**
    - ภายในเวลาประมาณ 1.5 วินาที หน้าจอ OLED จะต้องดีดกลับไปเป็น `EDGE: LOCAL EDGE` โดยอัตโนมัติ
    - เมื่อรัน `dotnet run` ใหม่อีกครั้ง จอ OLED จะต้องกลับมาเป็น `CLOUD: READY` โดยที่เฟิร์มแวร์ ESP32 ไม่ค้างหรือไม่ต้องกดปุ่มรีเซ็ตฮาร์ดแวร์เลย
+
+
+```
+   PS C:\Users\artht\Desktop\ Week-09\Lab9_Codes\ESP32.Kestrel.Webserver> dotnet run
+Building...
+info: ESP32.Kestrel.Webserver.Services.SerialBridgeService[0]
+      กำลังเปิดการเชื่อมต่อ Serial Port: COM3 ที่ BaudRate 115200
+info: ESP32.Kestrel.Webserver.Services.SerialBridgeService[0]
+      เชื่อมต่อพอร์ต COM3 สำเร็จ!
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5200
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\artht\Desktop\ Week-09\Lab9_Codes\ESP32.Kestrel.Webserver
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+```
 ![alt text](Images/S__72851603.jpg)
 ![alt text](Images/S__72851613-1.jpg)
 
@@ -1009,9 +1029,11 @@ dotnet run
 1. **ทดสอบพิมพ์ข้อความในช่อง Remote Control บนเว็บ**
    - พิมพ์ข้อความภาษาอังกฤษ เช่น `"TEST OK"` หรือ `"IoT ALERT"` แล้วกดปุ่ม **ส่งข้อความ**
    - สังเกตที่ **Zone 3 ของหน้าจอ OLED จริง** ข้อความจะต้องเปลี่ยนเป็นคำที่พิมพ์จากหน้าเว็บทันที
-![alt text](Images/S__72851617.jpg)
-![alt text](<Images/Screenshot 2026-09-21 104734.png>)
 
+![alt text](Images/S__72925187.jpg)
+![alt text](<Images/Screenshot 2026-09-21 163802.png>)
+![alt text](Images/S__72925188.jpg)
+![alt text](<Images/Screenshot 2026-09-21 163839.png>)
 ---
 
 ## 4. การตรวจวัดความหน่วงเวลาและการพิสูจน์หลักฐาน (End-to-End Latency Forensics)
@@ -1049,11 +1071,11 @@ Measure-Command {
 
 | ตำแหน่งการหมุน | ค่า Raw ADC บน ESP32 ($0-4095$) | ค่าคำนวณบน Kestrel Server (%) | ค่าบนเว็บเกจ SVG (%) | แถบ Gauge บน OLED จริง (ตรง/ไม่ตรง) | โหมดที่แสดงบน Zone 3 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| หมุนซ้ายสุด ($0^\circ$) | 120 | 0.0% | 0.0% | [x] ตรง [ ] ไม่ตรง | CLOUD: READY |
-| หมุนประมาณ $45^\circ$ | 1085 | 24.6% | 24.6% | [x] ตรง [ ] ไม่ตรง | CLOUD: READY |
-| กึ่งกลาง ($90^\circ$) | 2050 | 50.0% | 50.0% | [x] ตรง [ ] ไม่ตรง | CLOUD: READY |
-| หมุนประมาณ $135^\circ$| 3010 | 75.3% | 75.3% | [x] ตรง [ ] ไม่ตรง | CLOUD: READY |
-| หมุนขวาสุด ($180^\circ$)| 4095 | 100.0% | 100.0% | [x] ตรง [ ] ไม่ตรง | CLOUD: READY |
+| หมุนซ้ายสุด ($0^\circ$) | 120 | 0.0% | 0.0% | [✅] ตรง [ ] ไม่ตรง | CLOUD: READY |
+| หมุนประมาณ $45^\circ$ | 1085 | 24.6% | 24.6% | [✅] ตรง [ ] ไม่ตรง | CLOUD: READY |
+| กึ่งกลาง ($90^\circ$) | 2050 | 50.0% | 50.0% | [✅] ตรง [ ] ไม่ตรง | CLOUD: READY |
+| หมุนประมาณ $135^\circ$| 3010 | 75.3% | 75.3% | [✅] ตรง [ ] ไม่ตรง | CLOUD: READY |
+| หมุนขวาสุด ($180^\circ$)| 4095 | 100.0% | 100.0% | [✅] ตรง [ ] ไม่ตรง | CLOUD: READY |
 
 ---
 
